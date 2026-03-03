@@ -100,6 +100,7 @@ const ALLOWED_TAGS = [
   "tailwind",
   "tech-industry",
   "typescript",
+  "open-source"
 ];
 const allowedCategoryAndTagValues = {
   categories: new Set(ALLOWED_CATEGORIES),
