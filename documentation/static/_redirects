@@ -1388,3 +1388,66 @@
 /core/templates/mantine/appwrite /core/templates/mantine 301
 /core/templates/mantine/medusa /core/templates/mantine 301
 
+
+
+/use-cases/usystem/ / 301
+
+/blog/use-params /blog/react-router-useparams/ 301
+
+/blog/tags/invoice-generator/ /blog/ 301
+
+/blog/best-front-end-frameworks-in- /blog/ 301
+
+/blog/6-best- /blog/ 301
+
+/Github / 301
+
+/)Refine / 301
+
+/core/docs/api-reference/core/data/hooks/useUpdate/ /core/docs/data/hooks/use-update/ 301
+
+/core/docs/api-reference/core/data/hooks/useMany/ /core/docs/data/hooks/use-many/ 301
+
+/core/docs/api-reference/core/data/hooks/useDelete/ /core/docs/data/hooks/use-delete/ 301
+
+/core/docs/api-reference/core/data/hooks/useCustom/ /core/docs/data/hooks/use-custom/ 301
+
+/core/docs/api-reference/core/data/hooks/useCreate/ /core/docs/data/hooks/use-create/ 301
+
+/core/docs/api-reference/core/data/hooks/useApiUrl/ /core/docs/data/hooks/use-api-url/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useUpdateMany/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useUpdateMany/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useMany/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useMany/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useOne/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useOne/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useList/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useList/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useUpdate/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useUpdate/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useDeleteMany/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useDeleteMany/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useInfiniteList/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useInfiniteList/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useDelete/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useDelete/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useCustomMutation/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useCustomMutation/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useCustom/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useCustom/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useCreateMany/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useCreateMany/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useCreate/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useCreate/ 301
+
+/core/docs/3.xx.xx/api-reference/core/data/hooks/useApiUrl/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useApiUrl/ 301
+
+/core/docs/3.xx.xx/advanced-tutorials/data-provider/supabase/api-reference/core/hooks/auth/useLogin/ /core/docs/authentication/hooks/use-login/ 301
+
+/advanced-tutorials/mutation-mode/ /core/docs/advanced-tutorials/mutation-mode/ 301
+
+/core/docs/data/hooks/useMany/ /core/docs/data/hooks/use-many/ 301
+
+/core/docs/api-reference/mui/components/auth-page/ /core/docs/ui-integrations/material-ui/components/auth-page/ 301
+
+/core/docs/3.xx.xx/tutorial/api-reference/core/data/hooks/useApiUrl/ /core/docs/3.xx.xx/api-reference/core/hooks/data/useApiUrl/ 301
