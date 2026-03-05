@@ -4,7 +4,7 @@ description: Choosing between open source and low-code for your internal tools? 
 slug: open-source-vs-low-code-internal-tools
 authors: ozgur
 category: "Alternatives"
-tags: [open-source, low-code, internal-tools]
+tags: [open-source, comparison]
 image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2026-03-05-open-source-internal-tools/banner.png
 hide_table_of_contents: false
 ---
