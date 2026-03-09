@@ -1358,7 +1358,10 @@
 
 /blog/vibe-coding /blog/what-is-vibe-coding/ 301
 /core/week-of-refine-supabase /core/ 301
+/core/week-of-refine-supabase/ /core/ 301
+/core/week-of-refine /core/ 301
 /core/week-of-refine/ /core/ 301
+/core/week-of-refine-strapi /core/ 301
 /core/week-of-refine-strapi/ /core/ 301
 
 /core/templates/ant-design/graphql /core/templates/ant-design 301
