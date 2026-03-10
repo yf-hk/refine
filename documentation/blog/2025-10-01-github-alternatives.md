@@ -7,8 +7,7 @@ category: "Alternatives"
 tags: [git, comparison]
 image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2025-10-01-github-alternatives/github-alternatives.png
 hide_table_of_contents: false
-last_update:
-  date: 2026-03-04
+last_update: 2026-03-04
 ---
 
 # GitHub Alternatives Worth Trying in 2025
