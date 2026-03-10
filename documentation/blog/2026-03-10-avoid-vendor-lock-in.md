@@ -4,7 +4,7 @@ description: Learn what vendor lock-in is, why it's risky for growing teams, and
 slug: avoid-vendor-lock-in
 authors: ozgur
 category: "Tutorials"
-tags: [open-source, internal-tools, best-practices]
+tags: [open-source]
 image: https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2026/2026-03-10-vendor-lock-in/banner.png
 hide_table_of_contents: false
 ---
