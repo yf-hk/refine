@@ -4,7 +4,7 @@ description: A practical guide to writing effective AI prompts for business use 
 slug: ai-prompts-for-business
 authors: ozgur
 category: "AI & Innovation"
-tags: [ai, productivity, business]
+tags: [ai]
 image: https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2026/2026-03-17-ai-business-prompts/banner.png
 hide_table_of_contents: false
 ---
