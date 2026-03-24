@@ -10,17 +10,17 @@ hide_table_of_contents: false
 last_update: 2026-03-18
 ---
 
-In this article, we will make a customizable internal issue tracker web application with Supabase and Refine.
+In this article, we will make a customizable [internal](https://refine.dev/blog/what-is-internal-tools/) issue tracker web application with Supabase and Refine.
 
 <!--truncate-->
 
 This web application will allow us to create issues and tasks for your team members. You will also be able to choose the priority of these tasks, their tags, and which person to assign them to.
 
-We will use [Supabase](https://supabase.com/) in the backend. Let's start by creating our Supabase account and tables.
+We will use Supabase in the backend. Let's start by creating our Supabase account and tables.
 
 ## Create Supabase Database
 
-We have to go to [Supabase](https://supabase.com/) and create an organization and database. Then open the SQL Editor and create our tables there.
+We have to go to Supabase and create an organization and [database](https://refine.dev/blog/supabase-database-setup/). Then open the SQL Editor and create our tables there.
 
 The tables we need for this project are `label`, `priority`, `status`, `users`, and `tasks`. In the `tasks` table, `label_id`, `priority_id`, and `status_id` are `bigint`, and `user_id` is `uuid` because these fields are related to the other tables.
 
@@ -1661,13 +1661,15 @@ export default App;
 
 Our project is done.
 
-As you can see, we made a simple and short task manager application using Refine on our front end and Supabase as its data provider.
+As you can see, we made a simple and short task manager [internal tool](https://refine.dev/blog/what-is-internal-tools/) using Refine on our front end and Supabase as its data provider. The same approach works for building a [Supabase admin panel](https://refine.dev/blog/admin-panel-with-supabase/) or any other data-driven dashboard.
 
 [Here is repo](https://github.com/refinedev/refine/tree/main/examples/blog-issue-tracker)
 
 For more information about Refine: [Refine GitHub Page](https://github.com/refinedev/refine)
 
 For other examples and articles that will interest you with Refine: [https://refine.dev/blog/](https://refine.dev/blog/)
+
+If you want to add OTP-based authentication to your Supabase app, check out our guide on [OTP authentication with Supabase and Twilio in React](/blog/supabase-twilio-otp-authentication-in-react/).
 
 ## Example
 

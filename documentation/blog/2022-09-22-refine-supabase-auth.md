@@ -22,7 +22,7 @@ When we talk about OTP-based authentication, users need to enter a six-digit OTP
 
 ## What is Supabase?
 
-[Supabase](https://supabase.com/) is an open-source Firebase alternative. It provides a real-time database, authentication, and media buckets in one platform. You can use Supabase with any frontend tool, such as React, Angular, or Vue.js.
+Supabase is an open-source Firebase alternative. It provides a real-time [database](https://refine.dev/blog/supabase-database-setup/), authentication, and media buckets in one platform. You can use Supabase with any frontend tool, such as React, Angular, or Vue.js.
 
 One of the great features of Supabase is its Auth service. Supabase Auth allows you to easily add OTP-based authentication to your app with just a few lines of code.
 
@@ -30,7 +30,7 @@ In this guide, you will implement OTP-based login in **Refine** using the Supaba
 
 ## What is Refine?
 
-[Refine](https://github.com/refinedev/refine) is a React-based open-source framework for building admin panels, dashboards, internal tools, and storefront apps rapidly. It helps developers avoid repetitive tasks demanded by CRUD operations and provides solutions for authentication, access control, routing, networking, and state management.
+[Refine](https://github.com/refinedev/refine) is a React-based open-source framework for building [admin panels](https://refine.dev/blog/admin-panel-with-supabase/), dashboards, [internal tools](https://refine.dev/blog/what-is-internal-tools/), and storefront apps rapidly. It helps developers avoid repetitive tasks demanded by CRUD operations and provides solutions for authentication, access control, routing, networking, and state management.
 
 One of the great features of Refine is its out-of-the-box data provider integrations. Refine has a built-in data provider for Supabase, and we'll see how to use it properly.
 
@@ -71,7 +71,7 @@ npm run dev
 
 Refine's [Supabase data provider](https://github.com/refinedev/refine/tree/main/packages/supabase) connects your app to Supabase and handles data operations through Refine's data layer. Now let's set up the Supabase project and get the credentials we need.
 
-Head over to [Supabase dashboard](https://supabase.com/dashboard) and sign in to your Supabase account. Next, create a new project by clicking on the "New Project" button.
+Head over to Supabase dashboard and sign in to your Supabase account. Next, create a new project by clicking on the "New Project" button.
 
 <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2022/2022-09-22-refine-supabase-auth/setup-supabase.png" alt="Supabase project setup screen" />
 
@@ -1016,3 +1016,5 @@ export default App;
 OTP authentication adds an extra layer of security to your application and helps ensure that only authorized users can access it. In this article, we've gone over how to add OTP-based authentication in **Refine** using Supabase Auth. We've also looked at how to set up the phone auth provider in Supabase using Twilio so that users can receive their OTP tokens.
 
 Following this article's steps, you should now have a **Refine** application with OTP-based authentication enabled.
+
+If you're looking for another Supabase project with Refine, check out our guide on [building a customizable issue tracker with Refine and Supabase](/blog/customizable-issue-tracker-with-refine-and-supabase/).
