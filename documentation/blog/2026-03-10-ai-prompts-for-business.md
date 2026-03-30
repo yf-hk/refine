@@ -5,7 +5,7 @@ slug: ai-prompts-for-business
 authors: ozgur
 category: "AI & Innovation"
 tags: [ai]
-image: https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2026/2026-03-17-ai-business-prompts/banner.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2026/2026-03-17-ai-business-prompts/banner-1.png
 hide_table_of_contents: false
 ---
 
