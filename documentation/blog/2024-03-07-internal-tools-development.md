@@ -1,13 +1,13 @@
 ---
 title: Developing Internal Tools in 2026
-description: Internal tools are specialized software applications used by a company's back-office departments.
+description: A complete guide to developing internal tools. From no-code platforms and AI builders to custom React development.
 slug: developing-internal-tools
 authors: abdullah_numan
 category: "Tutorials"
 tags: [admin-panel, tech-industry]
 image: https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2024/2024-03-07-internal-tools-development/social.png
 hide_table_of_contents: false
-last_update: "2026-03-23"
+last_update: "2026-03-31"
 ---
 
 ## Introduction
@@ -95,7 +95,7 @@ Internal tools provided by the above industry giants are battle tested solutions
 
 Off the shelf solutions are mostly not appropriate for small businesses just starting with a few concerns, limited technical capacity and a constrained budget. It is common for small businesses and startups nowadays to adopt an approach where they initially prefer custom tools development using **no-code platforms** and then when their business grows to a certain size, they subscribe to appropriate ERP or CRM solutions.
 
-Larger enterprises with a spare budget seek to invest in building custom solutions around atypical and innovative business ideas. While it could be possible for them to build a new tool from scratch, in many simple cases, a more sensible approach is to take advantage of available options such as no-code / low-code internal tool builders.
+Larger enterprises with a spare budget seek to invest in building custom solutions around atypical and innovative business ideas. While it could be possible for them to build a new tool from scratch, in many simple cases, a more sensible approach is to take advantage of available options such as no-code / [low-code](/blog/low-code) internal tool builders.
 
 ## Custom Internal Tool Builders: No Code / Low Code / AI-Powered Platforms
 
@@ -119,7 +119,7 @@ However, as in no-code platforms, low-code apps are subject to vendor lock-in, l
 
 ### AI-Powered Internal Tool Builders
 
-The most significant shift in 2025-2026 has been the rise of AI-powered development tools. These platforms use large language models to generate functional applications from natural language descriptions, often called ["vibe coding"](/blog/vibe-coding). Rather than dragging and dropping widgets or writing boilerplate, developers describe what they need and the AI generates the code.
+The most significant shift in 2025-2026 has been the rise of AI-powered development tools. These platforms use large language models to generate functional applications from natural language descriptions, often called ["vibe coding"](/blog/what-is-vibe-coding). Rather than dragging and dropping widgets or writing boilerplate, developers describe what they need and the AI generates the code.
 
 AI builders like [Refine](https://refine.dev/) take this further by combining domain-specific AI agents with production-grade open source frameworks. Instead of generating disposable code, they produce structured, maintainable applications built on battle-tested tools like React, TypeScript, and TanStack Query. The key differentiator is [source code ownership](/blog/source-code-ownership-low-code-platforms): you get the full codebase, can deploy it anywhere, and aren't locked into a platform.
 
@@ -158,7 +158,7 @@ In addition, enterprise systems also need to consider **interoperability** of to
 
 [Refine](https://github.com/refinedev/refine) is a React based meta framework that empowers enterprises with a wide range of technologies for building extensible and future-adaptive internal tools. In early 2026, Refine split into two products: **[Refine](https://refine.dev/)**, an AI-powered internal tool builder, and **[Refine Core](https://refine.dev/core)**, the open-source React framework that powers it. With v5, Refine Core ships with React 19 support, TanStack Query v5, and first-class shadcn/ui integration.
 
-Refine Core compares to industry standard competitors in the ecosystem, such as React Admin. It sets a benchmark with support for a wider range of state-of-the-art backend and UI systems.
+Refine Core compares to industry standard competitors in the ecosystem, such as React Admin. It sets a benchmark with support for a wider range of state-of-the-art backend and UI systems. If you're exploring the [React admin dashboard](/blog/react-admin-dashboard) space, Refine is worth a close look.
 
 In the sections ahead, we present some guiding insight into how Refine compares to its competitors.
 
@@ -216,10 +216,43 @@ Multitenancy is perhaps the most important part of internal tools. Roles based a
 
 Refine leverages latest libraries like React Query, [GraphQL Request](https://github.com/jasonkuhrt/graphql-request) and [GraphQL Query Builder](https://github.com/atulmy/gql-query-builder) for data fetching, caching, state manamgent and error handling. Refine's core handles many of the data heavy tasks with the help of these future adaptive solutions.
 
+### Security and Compliance
+
+Internal tools handle sensitive business data, so security can't be an afterthought. There are a few areas that matter most:
+
+- **Role-Based Access Control (RBAC).** Every internal tool needs fine-grained permissions. Who can view a record vs. edit it vs. delete it? Refine's [`accessControlProvider`](https://refine.dev/core/docs/authentication/access-control-provider/) integrates with libraries like [Cerbos](https://cerbos.dev/), [Casbin](https://casbin.org/), and [Permify](https://www.permify.co/) to enforce access policies at the component and route level, not just the API layer.
+- **Audit Logging.** For compliance-sensitive industries (healthcare, finance, legal), you need a record of who changed what and when. Refine's [`auditLogProvider`](https://refine.dev/core/docs/audit-logs/audit-log-provider/) hooks into every mutation automatically, so you get structured audit trails without wiring them up manually.
+- **Data Masking and Input Validation.** Sensitive fields like SSNs, payment details, or personal data should be masked in the UI and validated on both client and server. This isn't unique to any framework, but it's worth factoring into your architecture from day one rather than bolting it on later.
+- **AI-Specific Risks.** If you're using AI-powered builders or code generation, you need to think about prompt injection, hallucinated code, and accidental exposure of secrets. The general rule: always review AI-generated code before it hits production, and never feed sensitive data into prompts unless you control the model and infrastructure.
+
+### Why Refine v5 Matters for Internal Tools
+
+The v5 release isn't just a version bump. Each upgrade has a practical impact on how you build internal tools:
+
+- **React 19 support** brings the new `use()` hook, improved Suspense boundaries, and the React Compiler. For internal tools with complex data-heavy pages, this translates to fewer unnecessary re-renders and smoother loading states, things that matter when your users are staring at dashboards, tables, and forms all day.
+- **TanStack Query v5** replaces React Query v4 under the hood, bringing a smaller bundle, better TypeScript inference, and improved garbage collection for inactive queries. In practice, that means data-heavy admin panels stay responsive even when users jump between dozens of resources.
+- **First-class shadcn/ui integration** adds a modern, composable component system alongside Ant Design, Material UI, and Mantine. Since shadcn/ui components are copy-pasted into your project (not imported from a package), you own every line and can customize freely, which is exactly what teams need when building internal tools with specific design requirements.
+
+## Build vs. Buy: Choosing the Right Approach
+
+With so many options available, from off-the-shelf SaaS to AI-powered builders to full custom development, it helps to have a simple framework for deciding which path to take. Here's a quick breakdown:
+
+| Factor                    | Off-the-Shelf (SaaS)         | No-Code / Low-Code       | AI-Powered Builder                 | Custom (Open Source)         |
+| ------------------------- | ---------------------------- | ------------------------ | ---------------------------------- | ---------------------------- |
+| **Best for**              | Standard processes (CRM, HR) | Simple apps, prototypes  | Structured CRUD apps, admin panels | Complex, unique requirements |
+| **Time to launch**        | Hours                        | Days                     | Days                               | Weeks to months              |
+| **Customizability**       | Low                          | Low–Medium               | Medium–High                        | Full                         |
+| **Source code ownership** | No                           | No                       | Depends (yes with Refine)          | Yes                          |
+| **Vendor lock-in risk**   | High                         | High                     | Low–Medium                         | None                         |
+| **Cost at scale**         | Per-seat pricing adds up     | Per-seat pricing adds up | Varies                             | Hosting + team cost          |
+| **Best team fit**         | Non-technical managers       | Citizen developers       | Small dev teams                    | Dedicated dev teams          |
+
+**When to build from scratch:** Your requirements are unique, you need deep integrations with existing systems, or you can't accept vendor lock-in. **When to buy:** Your needs map cleanly to a standard tool and your team lacks development capacity. **When to use an AI-powered builder:** You need the speed of low-code with the flexibility of custom code, and you want to own the output.
+
 ## The Way Forward
 
 Enterprise internal tools development largely depends on the complexity of the requirements, the business maturity of the organization, technical level of managers and budgetary constraints. A simple tool like a project tracker could be easily built by non-tech managers. For more complex requirements and atypical business problems / solutions bespoke development with open source technologies is the way to go.
 
-With a rich ecosystem of future adaptive technologies, support for growing list of backend API and UI integrations, Refine is fully equipped to make internal tools development in 2024 a breeze. You can build complex systems like CRMs, admin panels, dashboards, data visualization and more.
+With a rich ecosystem of future adaptive technologies, support for growing list of backend API and UI integrations, Refine is fully equipped to make internal tools development in 2026 a breeze. You can build complex systems like CRMs, admin panels, dashboards, data visualization and more.
 
 Feel free to check out Refine's [examples](https://refine.dev/core/templates) and [templates](https://refine.dev/templates/) to learn more about the internal tools you can build with Refine.
