@@ -228,4 +228,3 @@ export const ProductList: React.FC = () => {
   );
 };
 `.trim();
-

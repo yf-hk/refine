@@ -386,4 +386,3 @@ export const finalFiles = {
     active: true,
   },
 };
-

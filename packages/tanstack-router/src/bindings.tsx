@@ -26,8 +26,11 @@ export const stringifyConfig = {
 
 export const routerProvider: RouterProvider = {
   go: () => {
-    const { pathname, search: existingSearch, hash: existingHash } =
-      useLocation();
+    const {
+      pathname,
+      search: existingSearch,
+      hash: existingHash,
+    } = useLocation();
     const navigate = useNavigate();
     const router = useRouter();
 
@@ -44,11 +47,7 @@ export const routerProvider: RouterProvider = {
           ...query,
         };
 
-        const normalizedHash = (
-          hash ??
-          (keepHash ? existingHash : "") ??
-          ""
-        )
+        const normalizedHash = (hash ?? (keepHash ? existingHash : "") ?? "")
           .replace(/^#/, "")
           .trim();
 
@@ -109,12 +108,12 @@ export const routerProvider: RouterProvider = {
         pathname,
         params: {
           ...combinedParams,
-          currentPage: convertToNumberIfPossible(
-            combinedParams.currentPage,
-          ) as number | undefined,
-          pageSize: convertToNumberIfPossible(
-            combinedParams.pageSize,
-          ) as number | undefined,
+          currentPage: convertToNumberIfPossible(combinedParams.currentPage) as
+            | number
+            | undefined,
+          pageSize: convertToNumberIfPossible(combinedParams.pageSize) as
+            | number
+            | undefined,
           to: combinedParams.to as string | undefined,
         },
       };

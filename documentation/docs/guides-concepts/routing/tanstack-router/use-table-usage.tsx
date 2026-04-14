@@ -242,4 +242,3 @@ export const ProductList: React.FC = ({ tableProps }) => {
   );
 };
 `.trim();
-

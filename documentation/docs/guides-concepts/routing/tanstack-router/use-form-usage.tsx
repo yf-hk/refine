@@ -202,4 +202,3 @@ export const ProductEdit: React.FC = () => {
   );
 };
 `.trim();
-

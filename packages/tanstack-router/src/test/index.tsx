@@ -109,9 +109,7 @@ export const TestWrapper: (
       defaultPreload: false,
     });
 
-    return (
-      <TanStackRouterProvider router={router} />
-    );
+    return <TanStackRouterProvider router={router} />;
   };
 };
 

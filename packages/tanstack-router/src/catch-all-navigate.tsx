@@ -7,6 +7,7 @@ import { Navigate, useLocation } from "@tanstack/react-router";
 export const CatchAllNavigate: React.FC<{ to: string }> = ({ to }) => {
   const location = useLocation();
   const queryValue = location.href.split("#")[0];
+  const search = queryValue.length > 1 ? { to: queryValue } : undefined;
 
-  return <Navigate to={to as never} search={{ to: queryValue }} />;
+  return <Navigate to={to as never} search={search as never} />;
 };
