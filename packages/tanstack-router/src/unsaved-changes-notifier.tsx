@@ -23,6 +23,10 @@ export const UnsavedChangesNotifier: React.FC<UnsavedChangesNotifierProps> = ({
     return translate(translationKey, message);
   }, [translationKey, message, translate]);
 
+  const serializedSearch = React.useMemo(() => {
+    return JSON.stringify(location.search);
+  }, [location.search]);
+
   const blocker = useBlocker({
     shouldBlockFn: ({ next }) => {
       if (!warnWhen) {
@@ -31,8 +35,7 @@ export const UnsavedChangesNotifier: React.FC<UnsavedChangesNotifierProps> = ({
 
       return (
         next.pathname !== location.pathname ||
-        next.searchStr !== location.searchStr ||
-        next.hash !== location.hash
+        JSON.stringify(next.search) !== serializedSearch
       );
     },
     enableBeforeUnload: warnWhen,

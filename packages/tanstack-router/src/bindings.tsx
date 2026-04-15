@@ -71,6 +71,8 @@ export const routerProvider: RouterProvider = {
           hash: hasUrlHash ? normalizedHash : undefined,
           replace: type === "replace",
         });
+
+        return;
       },
       [existingHash, existingSearch, navigate, pathname, router],
     );
