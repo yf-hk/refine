@@ -49,35 +49,7 @@ export const TestWrapper: (
 }) => {
   return ({ children }): React.ReactElement => {
     const rootRoute = createRootRoute({
-      component: () => (
-        <Refine
-          dataProvider={dataProvider ?? MockJSONServer}
-          i18nProvider={i18nProvider}
-          routerProvider={routerProvider ?? mockRouterProvider()}
-          authProvider={authProvider}
-          notificationProvider={notificationProvider}
-          resources={resources ?? [{ name: "posts", list: "/posts" }]}
-          accessControlProvider={accessControlProvider}
-          options={{
-            ...options,
-            disableTelemetry: true,
-            reactQuery: {
-              clientConfig: {
-                defaultOptions: {
-                  queries: {
-                    gcTime: 0,
-                    staleTime: 0,
-                    networkMode: "always",
-                  },
-                },
-              },
-            },
-          }}
-        >
-          {children}
-          <Outlet />
-        </Refine>
-      ),
+      component: () => <Outlet />,
     });
 
     const routes = [
@@ -107,6 +79,35 @@ export const TestWrapper: (
         initialEntries: routerInitialEntries ?? ["/"],
       }),
       defaultPreload: false,
+      InnerWrap: ({ children: routerChildren }) => (
+        <Refine
+          dataProvider={dataProvider ?? MockJSONServer}
+          i18nProvider={i18nProvider}
+          routerProvider={routerProvider ?? mockRouterProvider()}
+          authProvider={authProvider}
+          notificationProvider={notificationProvider}
+          resources={resources ?? [{ name: "posts", list: "/posts" }]}
+          accessControlProvider={accessControlProvider}
+          options={{
+            ...options,
+            disableTelemetry: true,
+            reactQuery: {
+              clientConfig: {
+                defaultOptions: {
+                  queries: {
+                    gcTime: 0,
+                    staleTime: 0,
+                    networkMode: "always",
+                  },
+                },
+              },
+            },
+          }}
+        >
+          {children}
+          {routerChildren}
+        </Refine>
+      ),
     });
 
     return <TanStackRouterProvider router={router} />;
